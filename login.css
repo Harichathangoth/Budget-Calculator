@@ -1,0 +1,8 @@
+.login-body{
+    background-image: url('https://media1.giphy.com/media/lcGojYLKJFvm2LKcVm/giphy.gif?cid=ecf05e477pwzks1d6qo4e8efl1869ihrepeczid631trod2t&ep=v1_gifs_related&rid=giphy.gif&ct=g');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+*{
+    color: rgb(147, 19, 19);
+}

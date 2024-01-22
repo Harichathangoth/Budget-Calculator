@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="home.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+</head>
+<body>
+    
+       <div class="content">
+          <div class="head text-light">
+            <h1>Welcome </h1>
+            <button class="btn btn-info" onclick="logout()">Log out</button>
+          </div>
+          <div class="name text-light">
+            <h1>Smart  Wallet</h1>
+          </div>
+          <div class="total">
+            <div class="inc bg-success text-light" >
+                <h4>Total Balance</h4><br>
+                <h4 id="incomedisplay"></h4>
+            </div>
+            <div class="exp bg-info text-light">
+                <h4>Total Expence</h4><br>
+                <h4 id="expencedisplay"></h4>
+            </div >
+          </div>
+          <div class="total">
+                <div class="col-md-1">
+                </div>
+                <div class="add-inc  col-md-4 me-1" >
+                    <h2 class="text-success"><b>Add Income</b></h2>
+                    <div class="form-floating mb-3">
+                        <input type="email" class="form-control" id="incometype" placeholder="name@example.com">
+                        <label for="floatingInput">Enter Income Type</label>
+                      </div>
+                      <div class="form-floating mb-3 ">
+                        <input type="number" class="form-control" id="incomeamount" placeholder="name@example.com">
+                        <label for="floatingInput">Enter Amount</label>
+                      </div>
+                      <div class="d-grid gap-2 ">
+                        <button  class="btn btn-success" type="button" onclick="addincome()">Add Income</button>
+                      </div>
+                </div>
+                <div class="add-exp col-md-4 ms-1">
+                    <h2 class="text-info"><b>Add Expense</b></h2>
+                    <div class="form-floating mb-3">
+                        <input type="email" class="form-control" id="expensetype" placeholder="name@example.com">
+                        <label for="floatingInput">Enter Expense Type</label>
+                      </div>
+                      <div class="form-floating mb-3">
+                        <input type="number" class="form-control" id="expenseamount" placeholder="name@example.com">
+                        <label for="floatingInput">Enter Amount</label>
+                      </div>
+                      <div class="d-grid gap-2 ">
+                        <button class="btn btn-info text-light" type="button" onclick="addexpense()">Add Expense</button>
+                      </div>
+                </div >
+                <div class="col-md-1"></div>
+          </div>
+          <div class="total" >
+            <button class="btn btn-warning" onclick="clearall()">clear all</button>
+          </div>
+          <div class="total text-light">
+            <h4>Income and Expense Details</h4>
+          </div>
+          <div class=" row">
+            <div class="col-12 col-md-6 p-5 ">
+                <table class="tab bg-success">
+                        <thead>
+                          <tr>
+                            <th><h4>Type</h4></th>
+                            <th><h4>Amount</h4></th>
+                            <th><h4>Balance</h4></th>
+                            <th><h4>Date</h4></th>
+                        </tr>
+                        </thead>
+                        <tbody id="tableincomedisplay">
+                          
+                        </tbody>
+                </table>
+            </div>
+            <div class="col-12 col-md-6 p-5">
+                <table class="tab bg-info">
+                    <thead>
+                      <tr>
+                        <th><h4>Type</h4></th>
+                        <th><h4>Amount</h4></th>
+                        <th><h4>Balance</h4></th>
+                        <th><h4>Date</h4></th>
+                    </tr>
+                    </thead>
+                  <tbody id="tableexpensedisplay">
+                    
+                  </tbody>
+            </table>
+            </div>
+          </div>
+          <div class="total text-light">
+            <h4>Expense Pie Chart</h4>
+          </div>
+          <div class="total text-light">
+            <button class="btn btn-primary btn-lg w-25 mb-5">Show Pie-Chart</button>
+          </div>
+          <div id="piechart" class="total">
+
+          </div>
+       </div>
+    
+
+    <script src="main.js">
+    </script>
+</body>
+</html>
