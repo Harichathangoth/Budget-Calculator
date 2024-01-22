@@ -23,7 +23,7 @@ function signup(){
         }
         localStorage.setItem(user.uname,JSON.stringify(user))
         alert(`Registerd Sucessfully`)
-        window.location = './login.html'
+        window.location = './index.html'
        }
     }
 }
@@ -54,7 +54,7 @@ function login(){
 }
 
 function logout(){
-    window.location = './login.html'
+    window.location = './index.html'
 }
 
 
